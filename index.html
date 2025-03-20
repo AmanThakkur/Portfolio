@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Aman Kumar | Frontend Developer</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo" title="Aman Kumar">A<span>K</span></div>
+        <div class="email">
+          <a href="mailto:amanthakuraman6@gmail.com" class="email-link">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              ></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            amanthakuraman6@gmail.com
+          </a>
+        </div>
+        <div class="nav">
+          <a class="nav-item" onclick="showModal('worksModal')">Works</a>
+          <a class="nav-item" onclick="downloadResume()">Resume</a>
+          <a class="nav-item" onclick="showModal('shelfModal')">Contact</a>
+        </div>
+      </header>
+
+      <div class="main-content">
+        <div class="intro-box">
+          <div class="speech-bubble" onclick="showAboutMe()">It's me</div>
+          <h1>Aman<br />Kumar</h1>
+          <div class="title">Frontend Developer at Mindreamers</div>
+          <p class="bio">
+            I have 03+ years experience building projects using React,
+            JavaScript, HTML, CSS, and Tailwind. My strong theoretical
+            foundation, combined with practical implementation, enables me to
+            write clean, efficient, and scalable code. I adapt quickly to new
+            technologies, follow best practices, and high-quality frontend
+            development. Additionally, my problem-solving skills and eagerness
+            to learn make me a valuable asset to any team.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/developeraman"
+              class="social-link"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#555"
+              >
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                ></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://github.com/AmanThakkur" class="social-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="#555"
+              >
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <a
+            href="#contact"
+            class="talk-button"
+            onclick="showModal('contactModal')"
+            >let's<br />talk</a
+          >
+        </div>
+        <div class="profile-image-container">
+          <img src="amana.jpg" alt="Aman Kumar" class="profile-image" />
+        </div>
+      </div>
+
+      <div id="aboutMeModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('aboutMeModal')"
+            >&times;</span
+          >
+          <h2>About Me</h2>
+          <div id="aboutMeContent">
+            <!-- Content will be dynamically loaded here -->
+          </div>
+        </div>
+      </div>
+
+      <div id="worksModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('worksModal')">&times;</span>
+          <h2>My Projects</h2>
+          <ul>
+            <li>
+              <a
+                href="https://obys-agenceeee.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Obys-agencyObys-agency
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://example.com/obys-agency"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Employee Managment System
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://weatheerappp.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Weather app
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="shelfModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('shelfModal')">&times;</span>
+          <h2>Contact Details</h2>
+          <h3>Name : Aman Kumar</h3>
+          <p>Email: amanthakuraman6@gmail.com</p>
+          <p>Phone: +91 7974457281</p>
+        </div>
+      </div>
+
+      <div id="contactModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('contactModal')"
+            >&times;</span
+          >
+          <h2>Let's Talk</h2>
+          <form
+            class="contact-form"
+            action="mailto:amanthakuraman6@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Your Message"
+              required
+            ></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
